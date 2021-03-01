@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../SCSS/modal-bootstrap.scss"
+    ],
+    "names": [],
+    "file": "modal-bootstrap.css"
+}
