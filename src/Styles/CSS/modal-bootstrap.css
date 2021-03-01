@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=modal-bootstrap.css.map */
+.modal {
+  display: inline;
+}
+
+#fuxan {
+  display: block;
+}
+/*# sourceMappingURL=modal-bootstrap.css.map */
