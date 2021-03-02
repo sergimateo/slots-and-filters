@@ -1,13 +1,13 @@
 <template>
   <div class="hello">
-    <button
+    <!-- <button
       type="button"
       class="btn btn-primary"
       data-toggle="modal"
       data-target="#staticBackdrop"
     >
       Launch converter
-    </button>
+    </button> -->
 
     <div class="modal" id="fuxan" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,MAAM;CAClB;;AACD,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,KAAK;CACjB",
+    "mappings": "AAGA,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,KAAK;CACjB",
     "sources": [
         "../SCSS/modal-bootstrap.scss"
     ],
