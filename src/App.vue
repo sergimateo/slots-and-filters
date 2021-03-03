@@ -1,19 +1,49 @@
 <template>
   <div id="app">
     <div v-if="showModalBootstrap">
-      <ModalBootstrap class="open-it">
+      <ModalBootstrap>
         <template v-slot:modalHeader>
           <div class="modal-header">
-            <h5 class="modal-title">Mercuries to Caballés Converter</h5>
+            <h5 class="modal-title mx-auto">Mercuries to Caballés Converter</h5>
           </div>
         </template>
         <template v-slot:modalBody>
           <div class="modal-body mx-auto">
-            <div class="mx-auto" style="width: 200px;">
-              <input />
+            <div class="mx-auto" id="input-box">
+              <input
+                :value="amount"
+                @input="updateValue"
+                step="0.01"
+                type="number"
+              />
             </div>
-            <p class="mt-3">
-              El cambio de xxx Mercuries es de yy Caballés.
+            <!--
+              ---
+                Esto es un test con vue2-filters package
+                ----
+              <p class="p-content mt-3">
+              Con vue2-filters:
+              {{
+                mercuries
+                  | currency("ℳ", 2, {
+                    thousandsSeparator: ".",
+                    decimalSeparator: ",",
+                  })
+              }}
+              to Caballés is
+              {{
+                mercuries
+                  | caballes
+                  | currency("₵", 3, {
+                    symbolOnLeft: false,
+                    thousandsSeparator: ",",
+                    decimalSeparator: ".",
+                  })
+              }}.
+            </p> -->
+            <p class="p-content mt-3">
+              Exchange of ℳ {{ mercuries | mercs }} to Caballés is
+              {{ mercuries | caballes }} ₵.
             </p>
           </div>
         </template>
@@ -22,17 +52,19 @@
             <button
               type="button"
               class="btn btn-secondary"
-              v-on:click="toggleModalBootstrap"
-              data-dismiss="modal"
+              @click="toggleModalBootstrap"
             >
-              Close
+              Done
             </button>
-            <!-- <button type="button" class="btn btn-primary">Understood</button> -->
           </div>
         </template>
       </ModalBootstrap>
     </div>
-    <div v-else class="whatever">Pos valens, pos adiós</div>
+    <div v-else @click="toggleModalBootstrap" class="seagull">
+      {{ freddieMsg }}
+    </div>
+
+    <div></div>
   </div>
 </template>
 

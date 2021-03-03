@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,5 +19,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.modal-title {
+  font-size: 1.2em;
+}
+
+#input-box {
+  width: 200px;
+}
+
+.seagull {
+  font-style: italic;
+  font-weight: 400;
+  font-family: 'Akaya Kanadaka', cursive;
+  font-size: 2.5rem;
+  color: #857416;
+}
+
+.seagull:hover {
+  color: bisque;
+  cursor: pointer;
 }
 /*# sourceMappingURL=app.css.map */
