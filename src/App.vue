@@ -17,34 +17,34 @@
                 type="number"
               />
             </div>
-            <!--
-              ---
-                Esto es un test con vue2-filters package
-                ----
+            
+               <!-- Esto es un test con vue2-filters package -->
+              
               <p class="p-content mt-3">
               Con vue2-filters:
               {{
                 mercuries
-                  | currency("ℳ", 2, {
-                    thousandsSeparator: ".",
-                    decimalSeparator: ",",
+                  | currency("ℳ ", 2, {
+                    thousandsSeparator: ",",
+                    decimalSeparator: ".",
                   })
               }}
               to Caballés is
               {{
                 mercuries
                   | caballes
-                  | currency("₵", 3, {
+                  | currency(" ₵", 3, {
                     symbolOnLeft: false,
-                    thousandsSeparator: ",",
-                    decimalSeparator: ".",
+                    thousandsSeparator: ".",
+                    decimalSeparator: "'",
                   })
               }}.
-            </p> -->
-            <p class="p-content mt-3">
+            </p>
+            <!-- Este es el filtro original -->
+            <!-- <p class="p-content mt-3">
               Exchange of ℳ {{ mercuries | mercs }} to Caballés is
               {{ mercuries | caballes }} ₵.
-            </p>
+            </p> -->
           </div>
         </template>
         <template v-slot:modalFooter>
