@@ -20,27 +20,31 @@
             <!--
               ---
                 Esto es un test con vue2-filters package
+                descomentar este p y comentar el otro
                 ----
-              <p class="p-content mt-3">
-              Con vue2-filters:
+                -->
+              
+                <!-- <p class="p-content mt-3">
+             Exchange of
               {{
-                mercuries
-                  | currency("ℳ", 2, {
-                    thousandsSeparator: ".",
-                    decimalSeparator: ",",
+                mercuries |
+                  mercs | currency("ℳ ", 2, {
+                    thousandsSeparator: ",",
+                    decimalSeparator: ".",
                   })
               }}
               to Caballés is
               {{
                 mercuries
                   | caballes
-                  | currency("₵", 3, {
+                  | currency(" ₵", 3, {
                     symbolOnLeft: false,
-                    thousandsSeparator: ",",
-                    decimalSeparator: ".",
+                    thousandsSeparator: ".",
+                    decimalSeparator: "´",
                   })
               }}.
             </p> -->
+            
             <p class="p-content mt-3">
               Exchange of ℳ {{ mercuries | mercs }} to Caballés is
               {{ mercuries | caballes }} ₵.
