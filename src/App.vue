@@ -4,34 +4,32 @@
       <ModalBootstrap>
         <template v-slot:modalHeader>
           <div class="modal-header">
-            <h5 class="modal-title mx-auto">Mercuries to Caballés Converter</h5>
+            <h5 class="modal-title mx-auto">{{ modalTitle }}</h5>
           </div>
         </template>
         <template v-slot:modalBody>
           <div class="modal-body mx-auto">
             <div class="mx-auto" id="input-box">
-              <input
-                :value="amount"
-                @input="updateValue"
-                step="0.01"
-                type="number"
-              />
+              <InputBoxCurrency
+                :amountprop="amount"
+                @amountHasChangedEvent="amount = $event"
+              ></InputBoxCurrency>
             </div>
-            
-               <!-- Esto es un test con vue2-filters package -->
-              
-              <p class="p-content mt-3">
-              Con vue2-filters:
+
+            <!-- Esto es un test con vue2-filters package -->
+
+            <p class="p-content mt-3">
+              Exchange Mercuries
               {{
-                mercuries
-                  | currency("ℳ ", 2, {
+                amount
+                  | mercs | currency("ℳ ", 2, {
                     thousandsSeparator: ",",
                     decimalSeparator: ".",
                   })
               }}
-              to Caballés is
+              to Caballés:
               {{
-                mercuries
+                amount
                   | caballes
                   | currency(" ₵", 3, {
                     symbolOnLeft: false,
@@ -40,7 +38,7 @@
                   })
               }}.
             </p>
-            <!-- Este es el filtro original -->
+            <!-- Este es el filtro original antes de poner el plugin de vue2filters -->
             <!-- <p class="p-content mt-3">
               Exchange of ℳ {{ mercuries | mercs }} to Caballés is
               {{ mercuries | caballes }} ₵.
@@ -61,7 +59,7 @@
       </ModalBootstrap>
     </div>
     <div v-else @click="toggleModalBootstrap" class="seagull">
-      {{ freddieMsg }}
+      {{ freddieMessage }}
     </div>
 
     <div></div>
