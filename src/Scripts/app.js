@@ -1,19 +1,19 @@
 import ModalBootstrap from "@/components/ModalBootstrap.vue";
-import Vue2Filters from 'vue2-filters'
+import InputBoxCurrency from "@/components/InputBoxCurrency.vue";
+import Vue2Filters from "vue2-filters";
 
 export default {
   name: "App",
   components: {
     ModalBootstrap,
+    InputBoxCurrency,
   },
   data() {
     return {
       amount: "",
-      mercuries: "0",
-      msg:"test message",
-      freddieMsg:'Por tí seré gaviota de tu bella mar',
+      modalTitle: "Mercuries to Caballés Converter",
+      freddieMessage: "Por tí seré gaviota de tu bella mar",
       showModalBootstrap: true,
-     
     };
   },
   filters: {
@@ -28,16 +28,6 @@ export default {
   methods: {
     toggleModalBootstrap() {
       this.showModalBootstrap = !this.showModalBootstrap;
-    },
-    updateValue(event) {
-      let value = event.target.value;
-      console.log(value, this.amount);
-      if (String(value).length <= 8) {
-        this.amount = value;
-        this.mercuries = value;
-      }
-
-      this.$forceUpdate();
     },
   },
   mixins: [Vue2Filters.mixin],

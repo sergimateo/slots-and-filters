@@ -4,19 +4,18 @@
       <ModalBootstrap>
         <template v-slot:modalHeader>
           <div class="modal-header">
-            <h5 class="modal-title mx-auto">Mercuries to Caballés Converter</h5>
+            <h5 class="modal-title mx-auto">{{ modalTitle }}</h5>
           </div>
         </template>
         <template v-slot:modalBody>
           <div class="modal-body mx-auto">
             <div class="mx-auto" id="input-box">
-              <input
-                :value="amount"
-                @input="updateValue"
-                step="0.01"
-                type="number"
-              />
+              <InputBoxCurrency
+                :amountprop="amount"
+                @amountHasChangedEvent="amount = $event"
+              ></InputBoxCurrency>
             </div>
+<<<<<<< HEAD
             <!--
               ---
                 Esto es un test con vue2-filters package
@@ -29,26 +28,45 @@
               {{
                 mercuries |
                   mercs | currency("ℳ ", 2, {
+=======
+
+            <!-- Esto es un test con vue2-filters package -->
+
+            <p class="p-content mt-3">
+              Exchange Mercuries
+              {{
+                amount
+                  | mercs | currency("ℳ ", 2, {
+>>>>>>> dev-branch
                     thousandsSeparator: ",",
                     decimalSeparator: ".",
                   })
               }}
-              to Caballés is
+              to Caballés:
               {{
-                mercuries
+                amount
                   | caballes
                   | currency(" ₵", 3, {
                     symbolOnLeft: false,
                     thousandsSeparator: ".",
+<<<<<<< HEAD
                     decimalSeparator: "´",
                   })
               }}.
             </p> -->
             
             <p class="p-content mt-3">
+=======
+                    decimalSeparator: "'",
+                  })
+              }}.
+            </p>
+            <!-- Este es el filtro original antes de poner el plugin de vue2filters -->
+            <!-- <p class="p-content mt-3">
+>>>>>>> dev-branch
               Exchange of ℳ {{ mercuries | mercs }} to Caballés is
               {{ mercuries | caballes }} ₵.
-            </p>
+            </p> -->
           </div>
         </template>
         <template v-slot:modalFooter>
@@ -65,7 +83,7 @@
       </ModalBootstrap>
     </div>
     <div v-else @click="toggleModalBootstrap" class="seagull">
-      {{ freddieMsg }}
+      {{ freddieMessage }}
     </div>
 
     <div></div>
