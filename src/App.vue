@@ -15,20 +15,6 @@
                 @amountHasChangedEvent="amount = $event"
               ></InputBoxCurrency>
             </div>
-<<<<<<< HEAD
-            <!--
-              ---
-                Esto es un test con vue2-filters package
-                descomentar este p y comentar el otro
-                ----
-                -->
-              
-                <!-- <p class="p-content mt-3">
-             Exchange of
-              {{
-                mercuries |
-                  mercs | currency("ℳ ", 2, {
-=======
 
             <!-- Esto es un test con vue2-filters package -->
 
@@ -37,7 +23,6 @@
               {{
                 amount
                   | mercs | currency("ℳ ", 2, {
->>>>>>> dev-branch
                     thousandsSeparator: ",",
                     decimalSeparator: ".",
                   })
@@ -49,21 +34,12 @@
                   | currency(" ₵", 3, {
                     symbolOnLeft: false,
                     thousandsSeparator: ".",
-<<<<<<< HEAD
-                    decimalSeparator: "´",
-                  })
-              }}.
-            </p> -->
-            
-            <p class="p-content mt-3">
-=======
                     decimalSeparator: "'",
                   })
               }}.
             </p>
             <!-- Este es el filtro original antes de poner el plugin de vue2filters -->
             <!-- <p class="p-content mt-3">
->>>>>>> dev-branch
               Exchange of ℳ {{ mercuries | mercs }} to Caballés is
               {{ mercuries | caballes }} ₵.
             </p> -->
