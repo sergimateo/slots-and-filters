@@ -32,3 +32,30 @@
   color: bisque;
   cursor: pointer;
 }
+
+// Vue transitions
+
+.mercury-msg-enter,
+.mercury-msg-leave-to {
+  opacity: 0;
+}
+
+.mercury-msg-leave-active {
+  // transition: all 1s;
+  transition: all 1.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.mercury-msg-enter-active {
+  transition: all 2s ease;
+}
+
+.modal-fader-enter,
+.modal-fader-leave-to {
+  opacity: 0;
+}
+
+.modal-fader-leave-active {
+  transition: all 1s;
+}
+.modal-fader-enter-active {
+  transition: all 4s ease;
+}

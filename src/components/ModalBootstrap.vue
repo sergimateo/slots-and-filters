@@ -8,6 +8,7 @@
       </div>
     </div>
   </div>
+  <!-- </transition> -->
 </template>
 
 <script type="text/javascript" src="@/Scripts/modalBootstrap.js"></script>
